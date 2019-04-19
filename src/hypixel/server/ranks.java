@@ -17,9 +17,12 @@ public class ranks {
         VIP_PLUS("§aVIP§6+", ChatColor.GREEN, ChatColor.GRAY),
         MVP("§bMVP", ChatColor.AQUA, ChatColor.AQUA),
         MVP_PLUS("§bMVP",ChatColor.AQUA, ChatColor.AQUA),
-        YOUTUBER("§6YT", ChatColor.GOLD, ChatColor.GRAY),
+        MVP_PLUS_PLUS("§6MVP",ChatColor.AQUA, ChatColor.AQUA),
+        YOUTUBER("§fYOUTUBE", ChatColor.RED, ChatColor.GRAY),
+        TWITCH("§fTWITCH", ChatColor.PURPLE, ChatColor.GRAY),
         HELPER("§9HELPER", ChatColor.BLUE, ChatColor.GRAY),
         MODERATOR("§2MOD", ChatColor.DARK_GREEN, ChatColor.GRAY),
+        SENIOR_MODERATOR("§2SR MOD", ChatColor.DARK_GREEN, ChatColor.GRAY),
         ADMIN("§cADMIN", ChatColor.RED, ChatColor.GRAY),
         OWNER("§cOWNER", ChatColor.RED, ChatColor.GRAY);
 
@@ -74,16 +77,26 @@ public class ranks {
                 paramPlayer.sendMessage(ChatColor.GREEN + "You are now MVP_PLUS");
                 teamutils.setNameTagColor(paramPlayer, "§b[MVP§c+§b] ");
                 break;
-            case YOUTUBER : paramPlayer.setPlayerListName("§6[YT] " +  paramPlayer.getName());
-                paramPlayer.setDisplayName("§6[YT] " +  paramPlayer.getName());
+            case MVP_PLUS_PLUS :paramPlayer.setPlayerListName("§6[MVP++] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§6[MVP++] " +  paramPlayer.getName());
+                paramPlayer.sendMessage(ChatColor.GREEN + "You are now MVP_PLUS_PLUS");
+                teamutils.setNameTagColor(paramPlayer, "§6[MVP++] ");
+                break;
+            case YOUTUBER : paramPlayer.setPlayerListName("§c[§fYOUTUBE§c] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§c[§fYOUTUBE§c] " +  paramPlayer.getName());
                 paramPlayer.sendMessage(ChatColor.GREEN + "You are now YOUTUBER");
-                teamutils.setNameTagColor(paramPlayer, "§6[YT] ");
+                teamutils.setNameTagColor(paramPlayer, "§c[§fYOUTUBE§c] ");
+                break;
+            case TWITCH : paramPlayer.setPlayerListName("§5[§fTWITCH§5] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§5[§fTWITCH§5] " +  paramPlayer.getName());
+                paramPlayer.sendMessage(ChatColor.GREEN + "You are now TWITCH");
+                teamutils.setNameTagColor(paramPlayer, "§5[§fTWITCH§5] ");
                 break;
             case ADMIN :
                 paramPlayer.setPlayerListName("§c[ADMIN] " +  paramPlayer.getName());
                 paramPlayer.setDisplayName("§c[ADMIN] " +  paramPlayer.getName());
                 paramPlayer.setOp(true);
-                paramPlayer.sendMessage(ChatColor.GREEN + "You are now ADMIN");
+                paramPlayer.sendMessage(ChatColor.GREEN + "You are now ADMINISTRATOR");
                 teamutils.setNameTagColor(paramPlayer, "§c[ADMIN] ");
                 break;
             case HELPER :
@@ -98,6 +111,13 @@ public class ranks {
                 paramPlayer.addAttachment(Main.pl, "mod", true);
                 paramPlayer.sendMessage(ChatColor.GREEN + "You are now MODERATOR");
                 teamutils.setNameTagColor(paramPlayer, "§2[MOD] ");
+                break;
+            case SENIOR_MODERATOR :
+                paramPlayer.setPlayerListName("§2[SR MOD] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§2[SR MOD] " +  paramPlayer.getName());
+                paramPlayer.addAttachment(Main.pl, "mod", true);
+                paramPlayer.sendMessage(ChatColor.GREEN + "You are now SENIOR MODERATOR");
+                teamutils.setNameTagColor(paramPlayer, "§2[SR MOD] ");
                 break;
             case OWNER :
                 paramPlayer.setOp(true);
