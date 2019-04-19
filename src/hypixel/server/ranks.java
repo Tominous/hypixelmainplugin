@@ -181,6 +181,14 @@ public class ranks {
                 paramPlayer.addAttachment(Main.pl, "staff", true);
                 teamutils.setNameTagColor(paramPlayer, "§2[MOD] ");
                 break;
+            case SENIOR_MODERATOR :
+                paramPlayer.setPlayerListName("§2[MOD] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§2[MOD] " +  paramPlayer.getName());
+                paramPlayer.addAttachment(Main.pl, "mod", true);
+                paramPlayer.addAttachment(Main.pl, "punch", true);
+                paramPlayer.addAttachment(Main.pl, "staff", true);
+                teamutils.setNameTagColor(paramPlayer, "§2[MOD] ");
+                break;
             case OWNER :
                 paramPlayer.setPlayerListName("§c[OWNER] " +  paramPlayer.getName());
                 paramPlayer.setDisplayName("§c[OWNER] " +  paramPlayer.getName());
