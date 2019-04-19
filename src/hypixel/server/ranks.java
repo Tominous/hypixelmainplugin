@@ -156,9 +156,18 @@ public class ranks {
                 paramPlayer.setDisplayName("§b[MVP§c+§b] " +  paramPlayer.getName());
                 paramPlayer.addAttachment(Main.pl, "punch", true);
                 break;
-            case YOUTUBER : paramPlayer.setPlayerListName("§6[YT] " +  paramPlayer.getName());
-                paramPlayer.setDisplayName("§6[YT] " +  paramPlayer.getName());
-                teamutils.setNameTagColor(paramPlayer, "§6[YT] ");
+            case MVP_PLUS_PLUS :
+                paramPlayer.setPlayerListName("§6[MVP++] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§6[MVPc++] " +  paramPlayer.getName());
+                paramPlayer.addAttachment(Main.pl, "punch", true);
+                break;
+            case YOUTUBER : paramPlayer.setPlayerListName("§c[§fYOUTUBE§c] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§c[§fYOUTUBE§c] " +  paramPlayer.getName());
+                teamutils.setNameTagColor(paramPlayer, "§c[§fYOUTUBE§c] ");
+                break;
+            case TWITCH : paramPlayer.setPlayerListName("§5[§fTWITCH§5] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§5[§fTWITCH§5] " +  paramPlayer.getName());
+                teamutils.setNameTagColor(paramPlayer, "§5[§fTWITCH§5] ");
                 break;
             case ADMIN :
                 paramPlayer.setPlayerListName("§c[ADMIN] " +  paramPlayer.getName());
@@ -182,12 +191,12 @@ public class ranks {
                 teamutils.setNameTagColor(paramPlayer, "§2[MOD] ");
                 break;
             case SENIOR_MODERATOR :
-                paramPlayer.setPlayerListName("§2[MOD] " +  paramPlayer.getName());
-                paramPlayer.setDisplayName("§2[MOD] " +  paramPlayer.getName());
+                paramPlayer.setPlayerListName("§2[SR MOD] " +  paramPlayer.getName());
+                paramPlayer.setDisplayName("§2[SR MOD] " +  paramPlayer.getName());
                 paramPlayer.addAttachment(Main.pl, "mod", true);
                 paramPlayer.addAttachment(Main.pl, "punch", true);
                 paramPlayer.addAttachment(Main.pl, "staff", true);
-                teamutils.setNameTagColor(paramPlayer, "§2[MOD] ");
+                teamutils.setNameTagColor(paramPlayer, "§2[SR MOD] ");
                 break;
             case OWNER :
                 paramPlayer.setPlayerListName("§c[OWNER] " +  paramPlayer.getName());
